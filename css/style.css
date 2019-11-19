@@ -1,0 +1,33 @@
+body
+{
+    background-color: aquamarine;
+}
+
+table.introduction
+{
+    background-color: aqua;
+    width : 50%;
+
+}
+
+#image
+{
+    height: 100%;
+    width: 40%;
+}
+
+#info
+{
+
+}
+
+img
+{
+    height: 100%;
+    width: 100%;
+}
+
+div.paragraph_title
+{
+    color: brown;
+}
