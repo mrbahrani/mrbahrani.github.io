@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+    <html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 15">
+<meta name=Originator content="Microsoft Word 15">
+</head>
+
+<body lang=EN-CA style='tab-interval:36.0pt;word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN>Functional
+Programming<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN>Abstract
+<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN>Introduction
+to Functional Programming</span></b></p>
+
+<p class=MsoNormal><span lang=EN>Functional programming is a programming
+paradigm that focuses on using expressions and purely mathematical functions
+without mutating state and data. While <span class=SpellE>Sml</span>, <span
+class=SpellE>Ocaml</span>, Lisp and Racket are great examples for pure
+implementation of this paradigm, most of the commercial programming languages
+support this paradigm alongside their conventional imperative and
+object-oriented paradigms. However, they do not force the paradigm, and it
+takes the developer's consideration to follow functional programming
+principles.</span></p>
+
+<p class=MsoNormal><span lang=EN>Unlike imperative programming languages that
+try to solve the problem by breaking it into multiple steps, the functional
+programming tries to break the problem into pure mathematical functions that
+can be described by (almost) fully mathematical notation</span></p>
+
+<p class=MsoNormal><span lang=EN><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN>Key
+Concepts of Functional Programming<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN>While there is no completely accepted formal
+definition for functional programming there are four concepts that most
+computer scientists believe goes under the umbrella of programming language</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN>Use of
+Pure Functions</span></b></p>
+
+<p class=MsoNormal><span lang=EN>A function can be called pure if it returns
+the same output given the same input every time you call it. Pure functions are
+independent. Pure functions do not affect any external state, and they are also
+not affected by external code.</span></p>
+
+<p class=MsoNormal><span lang=EN><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN>First-Class
+and Higher-Order Functions</span></b></p>
+
+<p class=MsoNormal><span lang=EN>In FP, functions can be treated like any other
+data. They can be passed as a parameter to another function and then get
+called. These functions are named first-class functions. You can also create a
+function on-the-fly, known as lambda functions in python and java, without any
+previous binding before getting passed as a parameter to other functions. In
+other words, in FP languages, the functions that take another function as an argument
+are called <b style='mso-bidi-font-weight:normal'>Higher-Order functions</b>.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN>Immutability<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN>immutability in programming refers to the
+concept where once data is created, it cannot be changed or modified. Instead
+of altering the original data, new data is created with the desired changes.
+This is a key principle in functional programming, ensuring that functions
+don't have side effects, which makes reasoning about code behavior easier.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN>Recursion
+Over Iteration<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN>In FP, recursion is favored over loops. The
+first reason is that loops naturally impose mutability, and it can have
+unpredictable side-effects to the state of the program. Moreover, Recursion
+works seamlessly with higher-order functions like map, filter, and reduce. And
+finally using recursion looks more like mathematical notation and has styling
+advantages.</span></p>
+
+<p class=MsoNormal><span lang=EN><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN>Benefits
+of FP<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN>Ease of
+Testing<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN>Pure functions make testing easier as you can
+just trace the call tree without any further memory state analysis. They also
+congenitally are run in an isolated environment not affecting other test
+functions and one doesn't need to make any further endeavor to verify this.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN>Concurrency<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN>Handling inter-process communication and
+communication are the most critical things to consider in a concurrent scheme.
+Immutability in FP decreases the critical regions drastically as no thread or
+process <span class=GramE>is able to</span> change the value of the memory
+after it is bound.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN>Downsides
+of FP<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN>Here’s a shortened version with the key
+points:</span></p>
+
+<p class=MsoNormal><span lang=EN><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN>Functional programming has some downsides that
+can pose challenges in certain contexts:</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN>Performance
+Overhead</span></b></p>
+
+<p class=MsoNormal><span lang=EN>Recursion can lead to stack overflows and
+inefficient memory usage if not optimized for tail calls. Additionally, the
+creation of many immutable data structures can increase the load on garbage
+collection.</span></p>
+
+<p class=MsoNormal><span lang=EN><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN>State
+Management<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN><span
+style='mso-spacerun:yes'> </span>Functional programming discourages mutable
+state, making it more difficult to handle stateful operations like I/O or
+network interactions. This often requires advanced constructs like monads in
+purely functional languages.</span></p>
+
+<p class=MsoNormal><span lang=EN><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN>Tooling
+Support<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN><span
+style='mso-spacerun:yes'> </span>Functional languages may have less mature
+tooling, especially for debugging, profiling, and refactoring, making
+large-scale development more challenging.</span></p>
+
+<p class=MsoNormal><span lang=EN><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN>These challenges should be considered when
+deciding whether to adopt functional programming for a project.</span></p>
+
+<p class=MsoNormal><span lang=EN><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN>Advantages
+of Functional Programming in <span class=GramE>medical software</span><o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN>Immutability
+and Predictability</span></b><span lang=EN>: Functional programming’s
+immutability ensures that data doesn’t change unexpectedly, leading to more
+predictable and testable code. This aligns with FDA requirements for control
+and traceability in medical software, as outlined in documents like <i
+style='mso-bidi-font-style:normal'>General Principles of Software Validation</i>.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN>Pure
+Functions and Reliability</span></b><span lang=EN>: Pure functions help ensure
+software outputs are consistent and free from side effects, making code more
+reliable and easier to test. This aligns with the FDA’s focus on modular and
+testable code as required by the <i style='mso-bidi-font-style:normal'>IEC
+62304</i> standard for medical device software.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN>Concurrency
+and Safety</span></b><span lang=EN>: Functional programming’s immutable data
+structures help reduce concurrency issues like race conditions, enhancing
+safety in real-time medical systems, an important consideration for regulatory
+compliance.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN>Modularity
+and Reusability</span></b><span lang=EN>: Functional programming encourages
+modular design, making it easier to isolate and validate software components,
+fitting well with FDA guidelines that stress modularity in medical software for
+easier verification and validation.</span></p>
+
+<p class=MsoNormal><span lang=EN><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN>Getting
+Started with ML<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN>functions:</span></p>
+
+<p class=MsoNormal><span lang=EN>f -&gt; x+1 (<span class=SpellE>Immutible</span>)</span></p>
+
+<p class=MsoNormal><span lang=EN>fact (<span class=SpellE>recuresion</span>)</span></p>
+
+<p class=MsoNormal><span lang=EN>list map (first class functions</span></p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><span lang=EN>fn</span></span></span><span
+class=GramE><span lang=EN>(</span></span><span lang=EN>) anonymous function</span></p>
+
+<p class=MsoNormal><span lang=EN><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN>Conclusion<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:l0 level1 lfo1'><![if !supportLists]><span
+lang=EN><span style='mso-list:Ignore'>&#9679;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR></span><span lang=EN>FP is a
+programming paradigm which intends to solve the problem by breaking it into
+pure mathematical functions using concepts like <span class=SpellE>Immutibitly</span>,
+recursion and higher-order functions</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:l0 level1 lfo1'><![if !supportLists]><span
+lang=EN><span style='mso-list:Ignore'>&#9679;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR></span><span lang=EN>While there
+are languages like ml and <span class=SpellE>Ocaml</span> that have been
+designed to be functional, almost all the modern programming languages like
+python, Java and <span class=SpellE>Cpp</span> provide the means of FP</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:l0 level1 lfo1'><![if !supportLists]><span
+lang=EN><span style='mso-list:Ignore'>&#9679;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR></span><span class=SpellE><span
+lang=EN>Testablity</span></span><span lang=EN> and <span class=SpellE>Cucurrency</span>
+are the essential benefits of FP while memory overhead is a downside</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:l0 level1 lfo1'><![if !supportLists]><span
+lang=EN><span style='mso-list:Ignore'>&#9679;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR></span><span lang=EN>FP can be
+applied to many medical software problems to come up with reliable solutions
+for those</span></p>
+
+</div>
+
+</body>
+
+</html>
+
+</html>
