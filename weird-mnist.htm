@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>The weird case of MNIST</head>
+    <body>
+        <p>MNIST is simple, clean, and easy to handle, which makes it perfect for beginners. But here's the thing: how often do we download it manually?</p>
+
+<h2>The Convenience of Python Libraries</h2>
+<p>For most of us, especially Python users, the answer is almost never. Thanks to tools like <strong>torchvision</strong> and <strong>tensorflow.datasets</strong>, grabbing MNIST is just a few lines of code away. A simple <code>torchvision.datasets.MNIST</code> call handles everything&mdash;downloading, caching, and loading the data.</p>
+
+<p>But what if you're working with <strong>C/C++</strong> or another lower-level language where such luxuries don't exist? You'd naturally head to Google and search for "MNIST dataset download."</p>
+
+<h2>The Download Roadblock</h2>
+<p>The first hit usually leads you to the <a href="https://yann.lecun.com/exdb/mnist/" target="_blank">official MNIST website</a>. It looks promising. You find the download links, click them eagerly... and&mdash;wait. <strong>403 Forbidden</strong>. The server rejects you.</p>
+
+<p>Confused? You're not alone.</p>
+
+<p>The question arises: why can't you manually download one of the most famous datasets in the world? And more importantly, <strong>who can?</strong></p>
+
+<h2>The Strange Fix</h2>
+<p>After scouring Stack Overflow and GitHub issues, you discover a workaround:</p>
+<pre><code>curl -A "Mozilla/5.0" https://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz</code></pre>
+
+<p>This <strong>fakes a browser request</strong>, bypassing the restrictions.</p>
+
+<p><strong>Except... it doesn’t always work.</strong> You might still get that frustrating <strong>403</strong>. The problem seems to have worsened with recent server updates.</p>
+
+<h2>How Python Libraries Bypass This</h2>
+<p>So how do libraries like torchvision manage to fetch MNIST without any hiccups?</p>
+
+<p><strong>They don't rely on Yann LeCun's server alone.</strong></p>
+
+<p>Torchvision, for instance, has <strong>multiple mirrors</strong>. If the official site blocks the request, the library simply tries another source. Here's a snippet from torchvision:</p>
+
+<pre><code>mirrors = ["https://ossci-datasets.s3.amazonaws.com/mnist"]</code></pre>
+
+<p>These mirrors are trusted and maintained to ensure seamless downloads.</p>
+
+<h2>A Call for Change</h2>
+<p>While mirrors are a clever workaround, the root issue remains. The official MNIST site should:</p>
+<ul>
+    <li><strong>Fix their server configurations</strong> to allow manual downloads.</li>
+    <li><strong>Publish file hashes</strong> to ensure data integrity and reduce risks of malicious downloads.</li>
+</ul>
+
+<p>Access to MNIST should be simple. After all, it's foundational to machine learning education.</p>
+
+<h2>Final Word</h2>
+<p>I'm currently developing a MNIST-like library for <strong>C/C++ (and CUDA)</strong>, similar to <code>torchvision.datasets</code>. If you're interested, feel free to <a href="https://github.com/mrbahrani" target="_blank">contribute to the repo</a>. Let's make MNIST accessible for everyone, across all languages.</p>
+    </body>
+</html>
